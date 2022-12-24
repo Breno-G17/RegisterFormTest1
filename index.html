@@ -5,10 +5,11 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="RegisterFormstyles.css" />
+    <script defer src="./script.js"></script>
     <title>RegisterForm</title>
   </head>
   <body>
-    <div id="card" class="maincard">  
+    <div id="card" class="maincard">
       <div id="info" class="information">
         <h1>INFORMATION</h1>
 
@@ -16,49 +17,40 @@
           Lorem ipsum, dolor sit amet consectetur adipisicing elit. Deleniti
           ducimus harum quae. Dolorum veritatis nostrum esse delectus repellat
           non eligendi ducimus omnis molestiae quam impedit, amet, dicta natus,
-          minus sunt. Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur sequi non odio quos dignissimos quidem quasi sed praesentium explicabo iusto, eligendi nihil nemo laborum aliquid cum quaerat ipsum alias consequuntur.
+          minus sunt. Lorem ipsum dolor sit amet consectetur adipisicing elit.
+          Consequatur sequi non odio quos dignissimos quidem quasi sed
+          praesentium explicabo iusto, eligendi nihil nemo laborum aliquid cum
+          quaerat ipsum alias consequuntur.
         </p>
 
         <p>
-          <b>Eu ultricies:</b> Lorem ipsum dolor sit amet, consectetur adipisicing
-          elit. Lorem et sapien et sapien. Lorem ipsum dolor sit amet,
-          consectetur adipisicing elit.
+          <b>Eu ultricies:</b> Lorem ipsum dolor sit amet, consectetur
+          adipisicing elit. Lorem et sapien et sapien. Lorem ipsum dolor sit
+          amet, consectetur adipisicing elit.
         </p>
 
         <button>Have An Account</button>
       </div>
 
-      <form action="#">
+      <form action="\" method="GET">
         <div id="registerform" class="form">
           <h1>REGISTER FORM</h1>
-          
+
           <div class="name">
             <div class="form-row-1">
-              <label id="first_name" for="first_name">First Name</label> 
+              <label for="first_name">First Name</label>
 
-              <input
-                  id="first_name"
-                  name="first_name"
-                  type="text"
-                  required
-                  minlength="2"
-                  maxlength="15"
-                />
+              <div class="name-alert"></div>
+
+              <input id="first_name" name="first_name" type="text" 
+              />
             </div>
 
             <div class="form-row-1">
-              <label id="last_name" for="last_name">Last Name</label>
+              <label for="last_name">Last Name</label>
 
-                <input
-                  id="last_name"
-                  name="last_name"
-                  type="text"
-                  required
-                  minlength="2"
-                  maxlength="25"
-                />
+              <input id="last_name" name="last_name" type="text" />
             </div>
-
           </div>
 
           <div id="email" class="email">
@@ -69,10 +61,6 @@
               name="email"
               id="email-input"
               placeholder="Enter your email address"
-              autocomplete="on"
-              maxlength="45"
-              minlength="7"
-              required
             />
           </div>
 
@@ -80,30 +68,16 @@
             <div class="form-row-1">
               <label for="password">Password</label>
 
-              <input
-                type="password"
-                name="password"
-                id="password"
-                required
-                minlength="5"
-                maxlength="12"
-                pattern="[a-zA-Z0-9!@#$%&§] {5,12}"
-              />
-              
+              <input type="password" name="password" id="password" />
             </div>
 
             <div class="form-row-1">
-              
               <label for="confirm_password">Confirm Password</label>
 
               <input
                 type="password"
                 name="confirm_password"
-                id="confirm_password"
-                required
-                minlength="5"
-                maxlength="12"
-                pattern="[a-zA-Z0-9!@#$%&§+] {5,12}"
+                id="confirm-password"
               />
             </div>
           </div>
@@ -114,26 +88,22 @@
               name="checkbox"
               id="terms-conditions"
               value="checkbox"
-              required
             />
-            <p>
-              I agree to the <a href="#">Terms and Conditions</a> 
-            </p>
-
+            <p>I agree to the <a href="#">Terms and Conditions</a></p>
           </div>
-          <div class="form-row-last"> 
+          <div class="form-row-last">
             <button
               type="submit"
               name="submit button"
               id="submit-btn"
               value="submit"
+              onclick="varifyFname()"
             >
               Register
             </button>
-        </div>
+          </div>
         </div>
       </form>
     </div>
-    <script src="./script.js"></script>
   </body>
 </html>
